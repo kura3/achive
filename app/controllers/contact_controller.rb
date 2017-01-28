@@ -10,7 +10,7 @@ class ContactController < ApplicationController
   def create
     @contact = Contact.create(blogs_params)
     if @contact.save
-      redirect_to new_contact_path, notice: "お問い合わせが完了しました！"
+      redirect_to blogs_path, notice: "お問い合わせが完了しました！"
     else
       render action: 'new'
     end
